@@ -27,6 +27,10 @@ class CalendarPage extends StatelessWidget {
                     firstDay: DateTime(DateTime.now().year - 1),
                     lastDay: DateTime(DateTime.now().year + 1),
                     focusedDay: state.focusedDay,
+                    headerStyle: const HeaderStyle(
+                      formatButtonVisible: false,
+                      titleCentered: true,
+                    ),
                     selectedDayPredicate: (day) =>
                         isSameDay(state.selectedDay, day),
                     onDaySelected: (selectedDay, focusedDay) {
